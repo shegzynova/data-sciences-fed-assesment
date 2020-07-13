@@ -1,0 +1,475 @@
+@font-face {
+    src: url('../fonts/Sen-Regular.woff') format('woff');
+    font-family: 'Sen';
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    src: url('../fonts/Sen-Bold.woff') format('woff');
+    font-family: 'Sen';
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+
+@font-face {
+    src: url('../fonts/Sen-ExtraBold.woff') format('woff');
+    font-family: 'Sen';
+    font-weight: bold;
+    font-style: normal;
+    font-display: block;
+}
+
+
+/* Animations */
+@keyframes hover {
+    0% {
+        top: -5px;
+    }
+    50% {
+        top: 5px;
+    }
+    100% {
+        top: -5px;
+    }
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        top: -50px;
+    }
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+input, button, button:focus {
+    outline: none;
+}
+
+/* General classes */
+.pink-bg {
+    background: #d63a88;
+}
+
+.pink-text {
+    color: #d63a88;
+}
+
+.green-bg {
+    background: #b3d677;
+}
+
+.green-text,
+.green-text:hover {
+    color: #b3d677;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.blue-bg {
+    background: #38bfc8;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.transition {
+    transition: all .3s linear;
+}
+
+/* Navbar styles */
+nav {
+    padding: 70px;
+    justify-content: space-between;
+    margin-bottom: -1px;
+}
+
+nav a.navbar-brand img{
+    width: 250px;
+}
+
+.navbar-toggle {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: transparent;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.navbar-toggle hr{
+    border: 2px solid #fff;
+    width: 40px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.navbar-toggle:focus{
+    outline: none;
+}
+
+.navbar-toggle hr:first-of-type {
+    margin-bottom: -8px;
+}
+
+.navbar-toggle.active hr:first-of-type {
+    transform: rotate(45deg);
+    margin-bottom: 0;
+    top: 10px;
+}
+
+.navbar-toggle.active hr:last-of-type {
+    transform: rotate(-45deg);
+    bottom: 10px;
+}
+
+.nav-menu {
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    animation: reveal .3s linear;
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+
+.nav-menu .nav-link {
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 10px auto;
+    font-family: inherit;
+}
+
+.nav-menu .nav-link:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+main,
+nav {
+    font-family: 'Sen', Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+
+/* Page styles */
+.hero-section {
+    padding-bottom: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    z-index: 6;
+    position: relative;
+    -webkit-box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
+}
+
+.hero-section-text h1.hero-text-header {
+    font-size: 9rem;
+    text-shadow: 1px 1px white, -1px -1px white;
+    line-height: 100%;
+}
+
+.hero-section-text .hero-text-sub-header {
+    font-size: 4rem;
+    padding: 0 8px;
+    display: inline-block;
+}
+
+.hero-section-text .hero-text-sub-header ,
+    .hero-section-text .hero-text-desc {
+    font-size: 2rem;
+}
+
+.hero-section-img img {
+    position: relative;
+    animation: hover 1s ease-in infinite;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.hero-text-desc {
+    font-size: 16px;
+}
+
+.features-section {
+    padding: 280px 0 180px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    position: relative;
+    margin-top: -250px;
+    z-index: 5;
+}
+
+.features-section-text .features-item {
+    margin-bottom: 50px;
+}
+
+.features-section-text .features-item p {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.features-section-text button.learn-more-btn {
+    padding: 7px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 1.8rem;
+    outline: none;
+}
+
+.features-section-text button.learn-more-btn:hover {
+    transform: scale(1.1);
+}
+
+.features-section-text .features-item h2 {
+    font-size: 2rem;
+}
+
+.features-section-img img {
+    width: 100%;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.family-section {
+    padding: 400px 0 150px;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    position: relative;
+    margin-top: -300px;
+    z-index: 4;
+}
+
+.family-section .family-section-header {
+    margin-bottom: 50px;
+}
+
+.family-section .family-section-header h2{
+    font-size: 5rem;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.family-section .family-section-header hr{
+    width: 36.4rem;
+    border: 5px solid #b3d677;
+    margin: 0 0 0 7px;
+}
+
+.family-item-wrapper article {
+    height: 500px;
+    margin-bottom: 70px;
+}
+
+.family-item-wrapper article:hover {
+    transform: scale(1.1);
+}
+
+.subscribe-section {
+    padding: 400px 0 100px;
+    margin-top: -300px;
+}
+
+.subscribe-section h3 {
+    font-size: 3rem;
+}
+
+.subscribe-section form {
+    margin: 30px 0;
+}
+
+.subscribe-section form input,
+.subscribe-section form select{
+    border: 5px solid #b3d677;
+    min-width: 46%;
+    margin-bottom: 10px;
+}
+
+.subscribe-section form button,
+.subscribe-section form input,
+.subscribe-section form select,
+.subscribe-section form option {
+    padding: 5px 15px;
+    border-radius: 40px;
+    font-size: 2.5rem;
+    height: 70px;
+}
+
+.subscribe-section form input::placeholder {
+    color: #b3d677;
+}
+
+.subscribe-section form button {
+    width: 100%;
+    margin: 30px 0;
+}
+
+.subscribe-section form button:hover {
+    font-size: calc(2.5rem + 5px);
+    padding: 0px 15px;
+}
+
+.subscribe-info-wrapper {
+    padding: 0 3vw;
+}
+
+.subscribe-info-wrapper h3 {
+    margin-bottom: 50px;
+}
+
+footer {
+    padding: 30px 5vw;
+    justify-content: space-between;
+}
+
+.footer-info {
+    width: 450px;
+}
+
+.footer-info img{
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    width: 250px;
+}
+
+.footer-links a{
+    display: block;
+    text-decoration: none;
+    line-height: 130%;
+}
+
+.footer-socials {
+    width: 420px;
+}
+
+.footer-socials a {
+    cursor: pointer;
+}
+
+.footer-socials a:hover i {
+    transform: scale(1.1);
+}
+
+.footer-socials a i{
+    font-size: 60px;
+}
+
+.footer-social-links-wrapper {
+    padding: 0 15px;
+}
+
+.footer-info,
+.footer-links,
+.footer-socials {
+    margin-bottom: 30px;
+    height: 180px;
+}
+
+.footer-socials p,
+.footer-info p,
+.footer-links a{
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.section-padding {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+
+@supports(-webkit-text-stroke: 1px #fff){
+    .hero-section-text h1.hero-text-header{
+        -webkit-text-stroke: 1px #fff;
+        text-shadow: none;
+        color: transparent;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .hero-section-text h1.hero-text-header {
+        font-size: 6rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        padding: 35px;
+    }
+
+    .hero-section-text .hero-text-sub-header, .hero-section-text .hero-text-desc,
+    .subscribe-section form button, .subscribe-section form input, .subscribe-section form select, .subscribe-section form option,
+    .nav-menu .nav-link {
+        font-size: 1.4rem;
+    }
+
+    .section-padding,
+    nav {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .family-section .family-section-header h2 {
+        font-size: 3.5rem;
+    }
+
+    .family-section .family-section-header hr {
+        border-width: 3px;
+        width: 25.5rem;
+        margin: 0 0 0 5px;
+    }
+
+    .subscribe-section h3 {
+        font-size: 2rem;
+    }
+
+    .footer-info {
+        width: 100%;
+        margin-bottom: 50px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navbar-toggle{
+        transform: scale(.7);
+    }
+    nav a.navbar-brand img {
+        width: 170px;
+    }
+
+    .family-section .family-section-header h2 {
+        font-size: 2rem;
+    }
+
+    .family-section .family-section-header hr {
+        width: 14.4rem;
+        margin: 0 0 0 3px;
+    }
+
+    .family-section {
+        clip-path: polygon(0 0, 100% 0, 100% 97%, 0% 100%)
+    }
+
+    .hero-section-text h1.hero-text-header {
+        font-size: 3.5rem;
+    }
+
+    .hero-section-text .hero-text-sub-header, .hero-section-text .hero-text-desc {
+        font-size: 0.9rem;
+    }
+    .subscribe-section h3 {
+        font-size: 1.6rem;
+    }
+
+}
