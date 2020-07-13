@@ -11,8 +11,9 @@
     />
     <meta
       name="description"
-      content="Fresh breath is priceless but we're in the business of giving it to you on the cheap"
+      content="Fresh breath is priceless but we're in the business of giving it to you for cheap"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css" rel="stylesheet"></link>  
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link
       rel="stylesheet"
@@ -28,11 +29,11 @@
             <img src="assets/img/Logo white.png" alt="logo" />
         </a>
         <button class="navbar-toggle text-center" id="nav-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <hr class="transition" />
-          <hr class="transition" />
+          <hr class="transition pos-relative" />
+          <hr class="transition pos-relative" />
         </button>
       
-        <div class="nav-menu pink-bg d-none" id="nav-menu">
+        <div class="nav-menu pink-bg d-none pos-relative" id="nav-menu">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item text-center">
               <a class="nav-link d-inline-block white-text" href="#benefits">Benefits</a>
@@ -47,33 +48,35 @@
         </div>
       </nav>
       <main>
-          <section class="hero-section pink-bg section-padding">
-            <div class="hero-content-wrapper d-flex row">
-              <div class="hero-section-text col-xl-6 col-lg-12">
-                  <h1 class="pink-text hero-text-header">
-                      SHARE
-                      <br />
-                      A <span class="white-text">PUR</span>
-                      <br />
-                      MOMENT
-                  </h1>
-                  <p class="green-bg pink-text hero-text-sub-header bold">
-                    IT'S WHAT'S INSIDE THAT COUNTS
-                  </p>
-                  <p class="white-text hero-text-desc">
-                      Feel Good Knowing PUR is made with the highest quality Ingredients
-                  </p>
-              </div>
+          <div class="hero-section-wrapper pos-relative">
+            <section class="hero-section pos-relative pink-bg section-padding">
+                <div class="hero-content-wrapper d-flex row">
+                <div class="hero-section-text col-xl-6 col-lg-12">
+                    <h1 class="pink-text hero-text-header">
+                        SHARE
+                        <br />
+                        A <span class="white-text">PUR</span>
+                        <br />
+                        MOMENT
+                    </h1>
+                    <p class="green-bg pink-text hero-text-sub-header bold">
+                        IT'S WHAT'S INSIDE THAT COUNTS
+                    </p>
+                    <p class="white-text hero-text-desc">
+                        Feel Good Knowing PUR is made with the highest quality Ingredients
+                    </p>
+                </div>
 
-              <div class="hero-section-img col-xl-6 col-lg-12">
-                  <img src="assets/img/Intro image.png" alt="fruit" />
-              </div>
-            </div>
+                <div class="hero-section-img col-xl-6 col-lg-12">
+                    <img class="pos-relative" src="assets/img/Intro image.png" alt="fruit" />
+                </div>
+                </div>
 
-          </section>
-
-          <section class="features-section green-bg section-padding" id="benefits">
-            <div class="features-content-wrapper d-flex row justify-content-between align-items-center">
+            </section>
+          </div>
+          <div class="features-section-wrapper pos-relative">
+          <section class="features-section pos-relative green-bg section-padding" id="benefits">
+            <div class="features-content-wrapper d-flex row justify-content-between align-items-center reveal">
                 <div class="features-section-img col-lg-6 col-12">
                     <img class="d-block" src="assets/img/Mint.png" alt="mint" />
                 </div>
@@ -102,13 +105,14 @@
               </div>
             </div>
           </section>
+          </div>
 
-          <section class="family-section blue-bg section-padding" id="variety">
+          <section class="family-section pos-relative blue-bg section-padding" id="variety">
               <div class="family-section-header">
                 <h2 class="green-text">Meet the Family</h2>
                 <hr />              
               </div>
-              <div class="family-item-wrapper row">
+              <div class="family-item-wrapper row reveal">
                   <article class="col-xl-3 col-lg-6 col-12 text-center transition">
                   <img src="assets/img/Pack 1.png" alt="peppermint" />
                 </article>
@@ -145,10 +149,16 @@
                   </h3>
                   <form>
                       <div class="d-flex justify-content-between flex-wrap">
-                        <input class="pink-bg d-block green-text col-lg-5 col-12 bold" type="email" placeholder="Email" />
-                        <select class="pink-bg d-block green-text col-lg-5 col-12 bold">
+                        <input class="pink-bg d-block green-text col-lg-6 col-12 bold" type="email" placeholder="Email" />
+                        <select class="pink-bg green-text col-lg-6 col-12 bold" id="subscribe-select">
                             <option selected disabled>
                                 Country
+                            </option>
+                            <option>
+                                Nigeria
+                            </option>
+                            <option>
+                                Canada
                             </option>
                         </select>
                       </div>
@@ -194,6 +204,8 @@
               </section>
           </footer>
       </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
+      <script src="https://unpkg.com/scrollreveal"></script>
       <script src="assets/js/site.js"></script>
   </body>
 </html>

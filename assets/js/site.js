@@ -6,9 +6,15 @@ const toggleNav = () => {
     navMenu.classList.toggle('d-none');
 }
 
+new SlimSelect({
+    select: '#subscribe-select'
+})
+
+ScrollReveal().reveal('.reveal', { delay: 300 });
+
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', toggleNav)
 })
 
-navToggler.addEventListener('click', toggleNav)
+navToggler.addEventListener('click', toggleNav);
 

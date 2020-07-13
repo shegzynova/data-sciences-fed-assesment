@@ -86,6 +86,10 @@ input, button, button:focus {
     transition: all .3s linear;
 }
 
+.pos-relative {
+    position: relative;
+}
+
 /* Navbar styles */
 nav {
     padding: 70px;
@@ -110,7 +114,8 @@ nav a.navbar-brand img{
     border: 2px solid #fff;
     width: 40px;
     border-radius: 10px;
-    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navbar-toggle:focus{
@@ -138,7 +143,6 @@ nav a.navbar-brand img{
     top: 0;
     animation: reveal .3s linear;
     border-bottom: 2px solid #fff;
-    position: relative;
 }
 
 .nav-menu .nav-link {
@@ -165,7 +169,6 @@ nav {
     padding-bottom: 100px;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
     z-index: 6;
-    position: relative;
     -webkit-box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 32px 5px 0px rgba(0,0,0,0.75);
@@ -189,11 +192,15 @@ nav {
 }
 
 .hero-section-img img {
-    position: relative;
-    animation: hover 1s ease-in infinite;
+    animation: hover 3s ease-in infinite;
     display: block;
     width: 100%;
     max-width: 100%;
+}
+
+.hero-section-wrapper {
+    filter: drop-shadow(-1px 15px 10px rgba(50, 50, 0, 0.5));
+    z-index: 10;
 }
 
 .hero-text-desc {
@@ -203,7 +210,6 @@ nav {
 .features-section {
     padding: 280px 0 180px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    position: relative;
     margin-top: -250px;
     z-index: 5;
 }
@@ -239,10 +245,14 @@ nav {
     max-width: 600px;
 }
 
+.features-section-wrapper {
+    filter: drop-shadow(-1px 2px 10px rgba(50, 50, 0, 0.2));
+    z-index: 9;
+}
+
 .family-section {
     padding: 400px 0 150px;
     clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
-    position: relative;
     margin-top: -300px;
     z-index: 4;
 }
@@ -286,20 +296,38 @@ nav {
 }
 
 .subscribe-section form input,
-.subscribe-section form select{
+.subscribe-section form .ss-single-selected{
     border: 5px solid #b3d677;
-    min-width: 46%;
     margin-bottom: 10px;
 }
 
 .subscribe-section form button,
 .subscribe-section form input,
-.subscribe-section form select,
-.subscribe-section form option {
+.subscribe-section form .ss-single-selected,
+.subscribe-section .ss-main .ss-single-selected.ss-open-below{
     padding: 5px 15px;
     border-radius: 40px;
     font-size: 2.5rem;
     height: 70px;
+}
+
+.subscribe-section form .ss-single-selected {
+    background: #d63a88;
+}
+
+.subscribe-section .ss-main .ss-single-selected .ss-arrow span {
+    border: solid #b3d677;
+    border-width: 0 4px 4px 0;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+.subscribe-section .ss-main .ss-single-selected .ss-arrow span.arrow-up {
+    margin-top: 10px;
+}
+
+.subscribe-section .ss-content {
+    width: 95%;
 }
 
 .subscribe-section form input::placeholder {
